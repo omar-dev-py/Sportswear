@@ -28,8 +28,11 @@ document.addEventListener('click', (e) => {
 
 // Slide Nav
 
+const sliderTrack = document.getElementById('sliderTrack');
+ let autoScrollInterval;
+ const scrollDelay = 4000;
+
 function scrollSlider (direction) {
-    const sliderTrack = document.getElementById('sliderTrack');
     const cardWidth = 400;
     const gap =30;
     const scrollAmount = (cardWidth + gap)*direction;
@@ -78,6 +81,7 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
         setTimeout(startAutoScroll, 5000);
     });
 });
+
 
 
 
